@@ -21,7 +21,7 @@ export default function Greetings(props) {
 
   useEffect(() => {
 
-  fetch(`${process.env.BASE_URL}/scheduled`, {
+  fetch(`${process.env.REACT_APP_BASE_URL}/scheduled`, {
     method: 'GET',
     headers: {
       "Authorization": `Bearer ${localStorage.getItem("accessToken")}`
@@ -31,7 +31,7 @@ export default function Greetings(props) {
   .then((res) => {
     setScheduledTask(res);
   });
-  fetch(`${process.env.BASE_URL}/`, {
+  fetch(`${process.env.REACT_APP_BASE_URL}/`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
         },
@@ -47,7 +47,7 @@ export default function Greetings(props) {
 
 useEffect(() => {
   const token = localStorage.getItem("accessToken")
-  fetch(`${process.env.BASE_URL}/users/userDetails`, {
+  fetch(`${process.env.REACT_APP_BASE_URL}/users/userDetails`, {
       method: 'POST',
       body: JSON.stringify({
         token: token
@@ -64,7 +64,7 @@ useEffect(() => {
     .catch((err) => {
       console.log(err);
     });
-    fetch(`${process.env.BASE_URL}/`, {
+    fetch(`${process.env.REACT_APP_BASE_URL}/`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
         },

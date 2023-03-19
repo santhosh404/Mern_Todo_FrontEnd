@@ -29,7 +29,7 @@ export default function Register() {
       password: Yup.string().required("Please enter password"),
     }),
     onSubmit: (values) => {
-      fetch(`${process.env.BASE_URL}/users/login`, {
+      fetch(`${process.env.REACT_APP_BASE_URL}/users/login`, {
         method: "POST",
         body: JSON.stringify({
           email: values.email,

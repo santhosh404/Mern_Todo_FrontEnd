@@ -35,7 +35,7 @@ export default function Register() {
     }),
     onSubmit: (values) => {
       console.log(values);
-      fetch(`${process.env.BASE_URL}/users/register`, {
+      fetch(`${process.env.REACT_APP_BASE_URL}/users/register`, {
         method: "POST",
         body: JSON.stringify({
           firstName: values.firstName,
