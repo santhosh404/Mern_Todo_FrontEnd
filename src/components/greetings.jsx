@@ -99,16 +99,7 @@ useEffect(() => {
         </Text>
         </div>
 
-        <Text fontSize="larger"> 
-        <div style={{ margin: "10px"}}>
-        <Highlight
-          query="4 new activity items"
-          styles={{ px: "2", py: "1", mx:"1", my:"1", bg: "blue.100", borderRadius:"10px", fontWeight:"bold", color:"cornflowerblue" }}
-        >
-          There have been 4 new activity items since yesterday
-        </Highlight>
-        </div>
-        </Text>
+        
         
         <Text fontSize='larger'>
         <div style={{ margin: "10px"}}>
