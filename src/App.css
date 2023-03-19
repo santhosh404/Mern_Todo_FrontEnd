@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+
+
+body {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+
+.App {
+  text-align: center;
+}
+
+.button {
+  border: 1px solid grey !important;
+
+}
+.heading {
+  font-family: 'Tilt Warp', cursive !important;
+  text-transform: uppercase !important;
+
+}
+
+.loading-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif !important;
+}
+p {
+  font-family: 'Lato', sans-serif !important;
+}
+
+.top-content {
+  margin: 70px 0px;
+}
+.navHead {
+  font-family: 'Tilt Warp', cursive !important;
+  font-size: 30px !important;
+  font-weight: normal;
+}
+
+.notesTitle {
+    display: inline;
+    float: left;
+    max-width: 60%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: 'Tilt Warp', cursive !important;
+    font-weight: normal !important;
+}
+.greetings {
+  font-family: 'Tilt Warp', cursive !important;
+  font-weight: normal !important;
+}
+.menuItem:hover {
+  background-color: #ffff;
+}
+.content {
+  border-radius: 10px;
+  height: 620px !important;
+  overflow: auto !important;
+}
+.content::-webkit-scrollbar {
+  display: none;
+}
+.Card {
+  box-shadow: none !important;
+  background-color: #EEEEEE !important;
+  padding: 5px;
+  border-radius: 10px !important;
+}
+.addmodalheader{
+  font-family: 'Tilt Warp', cursive;
+  text-align: center;
+  margin: 25px 0px;
+  font-weight: normal !important;
+  font-size: 25px !important;
+}
+
+.form{
+  width: 50%;
+  margin: 100px auto;
+  padding: 50px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.form input {
+  margin: 5px;
+  border: 1px solid lightgrey
+}
+.form textarea {
+  margin: 5px;
+  border: 1px solid lightgrey
+}
+
+.react-date-picker {
+  width:100% !important
+}
+.react-date-picker__wrapper {
+  border: 1px solid #efefef !important;
+  width: 100% !important;
+  padding: 5px !important;
+  border-radius: 5px !important;
+}
+
+.add-task {
+  display: block;
+  background-color: #ffff !important;
+  width: 100%;
+  margin: 20px 0px;
+  padding: 15px 0px;
+  font-size: 13px !important;
+  font-weight: normal !important;
+  font-family: 'Tilt Warp', cursive;
+  letter-spacing: 1px;
+}
+.close-task {
+  display: block;
+  background-color: #ffff !important;
+  width: 100%;
+  margin: 20px 0px;
+  padding: 15px 0px;
+  font-size: 13px !important;
+  font-weight: normal !important;
+  font-family: 'Tilt Warp', cursive;
+  letter-spacing: 1px;
+}
+
+
+.wrapper {
+  position:relative;
+}
+
+.icon {
+  padding: 10px;
+  position: absolute;
+  box-sizing:border-box;
+  top:50%;
+  left:2px;
+  transform: translateY(-50%);
+}
+
+.input {
+  height: 50px;
+  box-sizing:border-box;
+  padding-left: 2.3rem !important;
+  border: 1px solid lightgray !important;
+  font-family: 'Open Sans', sans-serif !important;
+
+}
+
+.loading {
+  background-color: lightgray;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 2;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.overlay{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.clearfilter {
+  background-color: #ffff !important;
+  border: 1px solid gray;
+  border-radius: 4em !important;
+  float: right;
+  padding: 10px !important;
+  font-weight: normal !important;
+  font-size: 10px !important;
+  height: 20px !important;
+  font-family: 'Tilt Warp', cursive;
+  letter-spacing: 1px;
+}
+
+.dueToday {
+  display: block;
+  background-color: #ffff !important;
+  width: 100%;
+  margin: 10px 0px;
+  padding: 25px 0px;
+  font-size: 13px !important;
+  font-weight: normal !important;
+  font-family: 'Tilt Warp', cursive;
+  letter-spacing: 1px;
+} 
+.dueToday.active {
+  background-color: #EEEEEE !important;
+  width: 100%;
+  margin: 10px 0px;
+  padding: 25px 0px;
+  font-size: 13px !important;
+  font-weight: normal !important;
+  font-family: 'Tilt Warp', cursive;
+  letter-spacing: 1px;
+} 
+
+.notification {
+  background-color: black;
+  padding: 2px;
+  width: 20px;
+  margin-left: 10px;
+  border-radius: 20px;
+  color: #ffff;
+}
+
+.completed.active {
+  background-color: #EEEEEE !important;
+  width: 100%;
+  margin: 10px 0px;
+  padding: 25px 0px;
+  font-size: 13px !important;
+  font-weight: normal !important;
+  font-family: 'Tilt Warp', cursive;
+  letter-spacing: 1px;
+}
+
+.completed {
+  display: block;
+  background-color: #ffff !important;
+  width: 100%;
+  margin: 10px 0px;
+  padding: 25px 0px;
+  font-size: 13px !important;
+  font-weight: normal !important;
+  font-family: 'Tilt Warp', cursive;
+  letter-spacing: 1px;
+}
+
+.createTask {
+  display: block;
+  background-color: #ffff !important;
+  width: 100%;
+  margin: 20px 0px;
+  padding: 25px 0px;
+  font-size: 13px !important;
+  font-weight: normal !important;
+  font-family: 'Tilt Warp', cursive;
+  letter-spacing: 1px;
+}
+
+.calendarIcon {
+  margin-right: 15px;
+}
+
+
+
+
+

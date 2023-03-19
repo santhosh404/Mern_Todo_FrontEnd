@@ -1,0 +1,91 @@
+body {
+    background: #e9ebee;
+    
+}
+
+.front-login{
+    background: linear-gradient(90deg, rgba(14,0,255,1) 0%, rgba(116,69,143,1) 0%, rgba(200,110,255,1) 100%);
+    border-radius: 10px 0px 0px 10px;
+    width: 100%;
+    padding: 0 3em;
+    text-align: center;
+    color: #fff;
+
+}
+.front-register{
+    background: linear-gradient(90deg, rgba(14,0,255,1) 0%, rgba(116,69,143,1) 0%, rgba(200,110,255,1) 100%);
+    border-radius: 0px 10px 10px 0px;
+    width: 100%;
+    padding: 0 3em;
+    text-align: center;
+    color: #fff;
+
+}
+.inner-content {
+    margin: 60px auto;
+}
+.greeting {
+    margin: 0.67em 0;
+    font-weight: 700;
+    font-size: 2.5em;
+    text-align: center;
+
+}
+.para {
+    font-size: 1.1em;
+}
+
+.login {
+    margin: 20px 0px;
+    font-size: 0.8em;
+    font-weight: 700 !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 1px solid #fff;
+    padding: 10px 20px !important;
+    border-radius: 10px !important;
+    background: none !important;
+}
+
+.registerForm {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+    margin: 100px;
+}
+
+.content-reg {
+    width: 100%;
+    height: 100%;
+    padding: 0 3em;
+    text-align: center;
+    
+}
+
+.heading {
+    font-weight: 700;
+    font-size: 2.5em;
+    text-align: center;
+    margin: 0.67em 0;
+}
+
+.button-design {
+    width: 100% !important;
+    margin: 2em auto;
+    color: #fff !important;
+    padding: 20px 0px !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: black !important;
+    font-size: 12px !important;
+    font-family: 'Tilt Warp', cursive !important;
+}
+.button-design:hover {
+    background: #ffff !important
+}
+
+.formInput {
+    padding: 12px 15px !important;
+    margin: 10px 0px;
+    width: 100%;
+    font-size: 1.4em;
+}
