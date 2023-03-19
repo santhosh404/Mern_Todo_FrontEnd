@@ -26,10 +26,9 @@ export default function ForgotPassword() {
     onSubmit: (values) => {
       fetch(`${process.env.REACT_APP_BASE_URL}/users/forgot-password`, {
         method:'POST',
-        body: {
-          email: values.email,
-        }
- 
+        body: JSON.stringify({
+            email: values.email
+          }),
       })
         .then((response) => response.json())
         .then((data) => {
