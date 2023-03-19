@@ -24,7 +24,7 @@ export default function ForgotPassword() {
       email: Yup.string().required("Please enter email").email("Please enter valid email"),
     }),
     onSubmit: (values) => {
-      fetch("http://localhost:4000/users/forgot-password", {
+      fetch(`${process.env.BASE_URL}/users/forgot-password`, {
         method:'POST',
         body: {
           email: values.email,

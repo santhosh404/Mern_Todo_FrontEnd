@@ -42,7 +42,7 @@ export default function ResetPassword () {
     }),
     onSubmit: (values) => {
       console.log(values)
-      fetch(`http://localhost:4000/users/reset-password/${id}/${token}`, {
+      fetch(`${process.env.BASE_URL}/users/reset-password/${id}/${token}`, {
         method: "PATCH",  
         headers: {
           "Content-type": "application/json",
@@ -90,7 +90,7 @@ export default function ResetPassword () {
 
 
   useEffect(() => {
-    fetch(`http://localhost:4000/users/reset-password/${id}/${token}`)
+    fetch(`${process.env.BASE_URL}/users/reset-password/${id}/${token}`)
     .then((data) => data.json()).then(response => {
       console.log(response);
       if(response.status !== "ok") {

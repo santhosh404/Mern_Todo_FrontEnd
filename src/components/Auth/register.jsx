@@ -35,7 +35,7 @@ export default function Register() {
     }),
     onSubmit: (values) => {
       console.log(values);
-      fetch("http://localhost:4000/users/register", {
+      fetch(`${process.env.BASE_URL}/users/register`, {
         method: "POST",
         body: JSON.stringify({
           firstName: values.firstName,

@@ -29,7 +29,7 @@ export default function Navbar() {
 
       useEffect(() => {
         const token = localStorage.getItem("accessToken")
-        fetch("http://localhost:4000/users/userDetails", {
+        fetch(`${process.env.BASE_URL}/users/userDetails`, {
            method: 'POST',
            body: JSON.stringify({
             token: token

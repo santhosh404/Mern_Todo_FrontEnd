@@ -69,7 +69,7 @@ export default function Todo(props) {
     }),
     onSubmit: (values) => {
       console.log(value);
-      fetch("http://localhost:4000/create", {
+      fetch(`${process.env.BASE_URL}/create`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -92,7 +92,7 @@ export default function Todo(props) {
             position: "top-right",
             isClosable: true,
           });
-          fetch("http://localhost:4000/", {
+          fetch(`${process.env.BASE_URL}/`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
           },
@@ -135,7 +135,7 @@ export default function Todo(props) {
   function handleDelete(value) {
     setLoading(true);
     const name = value.name;
-    fetch(`http://localhost:4000/${value._id}`, {
+    fetch(`${process.env.BASE_URL}/${value._id}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -146,7 +146,7 @@ export default function Todo(props) {
         const completed = document.querySelector(".completed");
         dueToday.classList.remove("active");
         completed.classList.remove("active");
-        fetch("http://localhost:4000/", {
+        fetch(`${process.env.BASE_URL}/`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
           },
@@ -178,7 +178,7 @@ export default function Todo(props) {
 
   function handleCompleted(obj, e) {
     setLoading(true)
-    fetch(`http://localhost:4000/makeCompleted/${obj._id}`, {
+    fetch(`${process.env.BASE_URL}/makeCompleted/${obj._id}`, {
       method:"PATCH",
       headers: {
         "Authorization": `Bearer ${localStorage.getItem("accessToken")}`
@@ -191,7 +191,7 @@ export default function Todo(props) {
         isClosable: true,
       });
 
-      fetch("http://localhost:4000/", {
+      fetch(`${process.env.BASE_URL}/`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
         },
@@ -210,7 +210,7 @@ export default function Todo(props) {
 
   function handleOnChange(searchValue) {
     setLoading(true);
-    fetch("http://localhost:4000/searchTodo", {
+    fetch(`${process.env.BASE_URL}/searchTodo`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -246,7 +246,7 @@ export default function Todo(props) {
     if (flag === 1) {
       console.log("if here");
       setLoading(true);
-      fetch("http://localhost:4000/scheduled", {
+      fetch(`${process.env.BASE_URL}/scheduled`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
         },
@@ -258,7 +258,7 @@ export default function Todo(props) {
         });
     } else {
       console.log("else here");
-      fetch("http://localhost:4000/", {
+      fetch(`${process.env.BASE_URL}/`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
         },
@@ -270,7 +270,7 @@ export default function Todo(props) {
           setLoading(false);
         });
     }
-    fetch("http://localhost:4000/scheduled", {
+    fetch(`${process.env.BASE_URL}/scheduled`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -283,7 +283,7 @@ export default function Todo(props) {
   }, [flag, props.isScheduleChanged]);
 
   useEffect(() => {
-    fetch("http://localhost:4000/completed", {
+    fetch(`${process.env.BASE_URL}/completed`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -314,7 +314,7 @@ export default function Todo(props) {
     dueToday.classList.remove("active");
     completed.classList.remove("active");
     e.target.classList.add("active");
-    fetch("http://localhost:4000/scheduled", {
+    fetch(`${process.env.BASE_URL}/scheduled`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -337,7 +337,7 @@ export default function Todo(props) {
     e.target.classList.add("active");
     setLoading(true)
 
-    fetch("http://localhost:4000/completed", {
+    fetch(`${process.env.BASE_URL}/completed`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -358,7 +358,7 @@ export default function Todo(props) {
     const completed = document.querySelector(".completed");
     dueToday.classList.remove("active");
     completed.classList.remove("active");
-    fetch("http://localhost:4000/", {
+    fetch(`${process.env.BASE_URL}/`, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
       },
